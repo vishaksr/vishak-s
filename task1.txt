@@ -1,0 +1,29 @@
+                            DIFFERENCE BETWEEN HTTP 1.1 VS HTTP 2
+          HTTP 1.1  
+                It works on the textual format.
+                There is head of line blocking that blocks all the request behind it until
+                it doesnt get its all resources.
+                It uses requests resources lining for use getting multiple pages.
+                It compresses data by itself.
+                Example:
+                    Before sending the request the response there is the TCP
+                    connection to establish between client and server for image (img.jpg)
+                    and the server gives a response as an image.jpg the connection was not lost here
+                    after the first request because we add a keep alive header which is the part
+                    of the request so there is an open connection between the server and client .
+                    there is a presistance connection between clinet and server that is merged
+                    into a single connection.
+        HTTP 2:
+               IT works on the binary protocol
+               It allows multiplexing so one TCP connection is requried for multiple requests.
+               It uses PUSH frame server that collects all multiple pages.
+               IT uses HPACK for data compression.
+               Eample:
+                  All the drawbacks where made connected in HTTP2. it works on the binary
+                  framing layer instead of textual that converts alll the message in binary format
+                  it works on fully multplexed that is one  TCP COnnection is used for multiple requests.
+                  
+
+
+            
+            
